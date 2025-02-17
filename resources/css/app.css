@@ -6,6 +6,14 @@
 }
 
 @layer tailwind-utilities {
-  @tailwind components;
+  @tailwind components/.*;
   @tailwind utilities;
 }
+
+@font-face {
+    font-family: 'Balabeloo';
+    src: url('fonts/balabeloo.woff2') format('woff2'),
+         url('fonts/balabeloo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }

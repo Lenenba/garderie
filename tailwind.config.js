@@ -13,7 +13,8 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['alkatra', ...defaultTheme.fontFamily.sans],
+                serif: ['baloo-tammudu-2', ...defaultTheme.fontFamily.serif],
             },
         },
     },
