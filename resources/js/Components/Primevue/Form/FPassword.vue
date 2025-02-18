@@ -4,9 +4,7 @@
         <Password  :id="id" v-model="model" class="w-full mt-4" :feedback="false" fluid />
         <label :for="id">{{ label }}</label>
     </IftaLabel>
-    <template v-if="message">
-        <Message v-for="(error, index) of message" :key="index" severity="error" size="small" variant="simple">{{ error.message }}</Message>
-    </template>
+    <Message v-if="message" severity="error" size="small" variant="simple" class="mt-4">{{ message }}</Message>
 </template>
 
 <script setup>
