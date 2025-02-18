@@ -4,7 +4,7 @@
         <InputText :id="id" v-model="model" class="w-full"/>
         <label :for="id">{{ label }}</label>
     </IftaLabel>
-    <Message v-if="message" severity="error" size="small" variant="simple">{{ message }}</Message>
+    <Message v-if="message" severity="error" size="small" variant="simple" class="mt-4">{{ message }}</Message>
 </template>
 
 <script setup>
