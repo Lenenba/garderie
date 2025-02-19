@@ -104,7 +104,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import { CustomerService } from '@/service/CustomerService';
+import { CustomerService } from '@/Service/CustomerService';
 import { FilterMatchMode, FilterOperator } from '@primevue/core/api';
 import  Button  from 'primevue/button';
 import  InputText  from 'primevue/inputtext';
