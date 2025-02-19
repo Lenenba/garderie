@@ -1,6 +1,6 @@
 
 <template>
-    <SimpleCard title="Galleria">
+    <SimpleCard title="Galleria" description="A responsive photo gallery component with thumbnails.">
         <Galleria :value="images" :responsiveOptions="responsiveOptions" :numVisible="5" :circular="true" containerStyle="max-width: 640px"
             :showItemNavigators="true">
             <template #item="slotProps">

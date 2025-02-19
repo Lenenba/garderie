@@ -5,6 +5,7 @@ import DataTable from '@/Components/Primevue/Pages/DataTable.vue';
 import PieStats from '@/Components/Primevue/Stats/PieStats.vue';
 import PolarStat from '@/Components/Primevue/Stats/PolarStat.vue';
 import Galleria from '@/Components/Primevue/Galleria.vue';
+import List from '@/Components/Primevue/List.vue';
 </script>
 
 <template>
@@ -17,6 +18,7 @@ import Galleria from '@/Components/Primevue/Galleria.vue';
                 <Galleria />
             </div>
             <div class="col-span-1">
+                <List />
             </div>
             <div class="col-span-1">
                 <PolarStat />
