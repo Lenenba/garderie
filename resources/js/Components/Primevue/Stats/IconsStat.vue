@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-surface-50 dark:bg-surface-950 px-6 py-8 md:px-12 lg:px-20">
+    <div class="bg-surface-50 dark:bg-surface-950">
         <div class="grid grid-cols-12 gap-4">
             <div class="col-span-12 md:col-span-6 lg:col-span-3">
                 <div class="bg-surface-0 dark:bg-surface-900 shadow p-4 rounded-border">

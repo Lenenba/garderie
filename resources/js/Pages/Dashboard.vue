@@ -1,8 +1,10 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import IconsStat from '@/Components/Primevue/Stats/IconsStat.vue';
-import ChartVertical from '@/Components/Primevue/Stats/ChartVertical.vue';
-import SimpleCard from '@/Components/Primevue/Pages/SimpleCard.vue';
+import DataTable from '@/Components/Primevue/Pages/DataTable.vue';
+import PieStats from '@/Components/Primevue/Stats/PieStats.vue';
+import PolarStat from '@/Components/Primevue/Stats/PolarStat.vue';
+import Galleria from '@/Components/Primevue/Galleria.vue';
 </script>
 
 <template>
@@ -10,10 +12,23 @@ import SimpleCard from '@/Components/Primevue/Pages/SimpleCard.vue';
 
     <AuthenticatedLayout>
         <IconsStat />
-        <div class="grid grid-cols-2 gap-6 mt-6">
-            <SimpleCard>
-                <ChartVertical />
-            </SimpleCard>
+        <div class="grid grid-cols-3 gap-2 mt-4">
+            <div class="col-span-1">
+                <Galleria />
+            </div>
+            <div class="col-span-1">
+            </div>
+            <div class="col-span-1">
+                <PolarStat />
+            </div>
+        </div>
+        <div class="grid grid-cols-4 gap-2 mt-4">
+            <div class="col-span-1">
+                <pie-stats />
+            </div>
+            <div class="col-span-3 ">
+                <DataTable />
+            </div>
         </div>
     </AuthenticatedLayout>
 </template>
