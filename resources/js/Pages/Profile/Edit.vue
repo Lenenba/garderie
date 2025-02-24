@@ -1,9 +1,10 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import DeleteUserForm from './Partials/DeleteUserForm.vue';
-import UpdatePasswordForm from './Partials/UpdatePasswordForm.vue';
-import UpdateProfileInformationForm from './Partials/UpdateProfileInformationForm.vue';
-import { Head } from '@inertiajs/vue3';
+import UserProfileHeader from '@/Components/Primevue/Profile/UserProfileHeader.vue';
+import { Head, useForm } from '@inertiajs/vue3';
+import SimpleCardHeaderColor from '@/Components/Primevue/Pages/SimpleCardHeaderColor.vue';
+import Finput from '@/Components/Primevue/Form/Flnput.vue';
+
 
 defineProps({
     mustVerifyEmail: {
@@ -13,44 +14,32 @@ defineProps({
         type: String,
     },
 });
+
+
+const form = useForm({
+    name: '',
+    email: '',
+    password: '',
+    role: '',
+    password_confirmation: '',
+});
+
 </script>
 
 <template>
     <Head title="Profile" />
 
     <AuthenticatedLayout>
-        <template #header>
-            <h2
-                class="text-xl font-semibold leading-tight text-gray-800"
-            >
-                Profile
-            </h2>
-        </template>
-
-        <div class="py-12">
-            <div class="mx-auto max-w-7xl space-y-6 sm:px-6 lg:px-8">
-                <div
-                    class="bg-white p-4 shadow sm:rounded-lg sm:p-8"
-                >
-                    <UpdateProfileInformationForm
-                        :must-verify-email="mustVerifyEmail"
-                        :status="status"
-                        class="max-w-xl"
-                    />
+        <UserProfileHeader />
+        <div class="mt-4 grid grid-cols-3 gap-2">
+            <SimpleCardHeaderColor>
+                <div class="mt-4">
+                    <Finput v-model="form.name"  id="name" label="name"  :message="form.errors.name"/>
                 </div>
-
-                <div
-                    class="bg-white p-4 shadow sm:rounded-lg sm:p-8"
-                >
-                    <UpdatePasswordForm class="max-w-xl" />
+                <div class="mt-4">
+                    <Finput v-model="form.email"  id="email" label="Email"  :message="form.errors.email"/>
                 </div>
-
-                <div
-                    class="bg-white p-4 shadow sm:rounded-lg sm:p-8"
-                >
-                    <DeleteUserForm class="max-w-xl" />
-                </div>
-            </div>
+            </SimpleCardHeaderColor>
         </div>
     </AuthenticatedLayout>
 </template>

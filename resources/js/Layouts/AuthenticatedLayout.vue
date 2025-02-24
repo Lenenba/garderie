@@ -2,15 +2,35 @@
     <div class="min-h-screen flex relative lg:static bg-surface-50 dark:bg-surface-950">
         <div id="app-sidebar-1" class="bg-surface-0 dark:bg-surface-950 min-h-screen hidden lg:block flex-shrink-0 absolute lg:static left-0 top-0 z-10 border-r border-surface select-none w-[280px]">
             <div class="flex flex-col h-full">
-                <div class="flex items-center px-8 flex-shrink-0 h-[60px]">
-                    <ApplicationLogo class="w-32 h-32 mt-4" />
-                </div>
-                <div class="overflow-y-auto">
+                <Link href="/">
+                    <div class="flex items-center px-8 flex-shrink-0 h-[60px]">
+                        <ApplicationLogo class="w-32 h-32 mt-4" />
+                    </div>
+                </Link>
+                <div class="overflow-y- mt-6">
                     <ul class="list-none p-4 m-0">
                         <li>
-                            <a class="flex items-center cursor-pointer p-4 rounded-border text-surface-700 dark:text-surface-100 hover:bg-surface-100 dark:hover:bg-surface-700 duration-150 transition-colors">
+                            <Link :class="{'bg-surface-100': route().current('dashboard')}" :href="route('dashboard')" class="flex items-center cursor-pointer p-4 rounded-border text-surface-700 dark:text-surface-100 hover:bg-surface-100 dark:hover:bg-surface-700 duration-150 transition-colors">
                                 <i class="pi pi-home mr-2 !text-xl !leading-none" />
                                 <span class="font-medium">Dashboard</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <a class="flex items-center cursor-pointer p-4 rounded-border text-surface-700 dark:text-surface-100 hover:bg-surface-100 dark:hover:bg-surface-700 duration-150 transition-colors">
+                                <i class="pi pi-user mr-2 !text-xl !leading-none" />
+                                <span class="font-medium">Enfant</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="flex items-center cursor-pointer p-4 rounded-border text-surface-700 dark:text-surface-100 hover:bg-surface-100 dark:hover:bg-surface-700 duration-150 transition-colors">
+                                <i class="pi pi-users mr-2 !text-xl !leading-none" />
+                                <span class="font-medium">Parents</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="flex items-center cursor-pointer p-4 rounded-border text-surface-700 dark:text-surface-100 hover:bg-surface-100 dark:hover:bg-surface-700 duration-150 transition-colors">
+                                <i class="pi pi-briefcase mr-2 !text-xl !leading-none" />
+                                <span class="font-medium">Gardienne</span>
                             </a>
                         </li>
                     </ul>
@@ -73,13 +93,13 @@
                         </a>
                     </li>
                     <li class="border-t border-surface lg:border-t-0">
-                        <a class="flex p-4 lg:px-4 lg:py-2 items-center hover:bg-surface-100 dark:hover:bg-surface-700 font-medium rounded-border cursor-pointer duration-150 transition-colors">
+                        <Link :href="route('profile.edit')" class="flex p-4 lg:px-4 lg:py-2 items-center hover:bg-surface-100 dark:hover:bg-surface-700 font-medium rounded-border cursor-pointer duration-150 transition-colors">
                             <img src="https://fqjltiegiezfetthbags.supabase.co/storage/v1/render/image/public/block.images/blocks/avatars/circle/avatar-f-1.png" class="mr-4 lg:mr-0 w-8 h-8" />
                             <div class="block lg:hidden">
                                 <div class="text-surface-900 dark:text-surface-0 font-medium">Josephine Lillard</div>
                                 <span class="text-surface-600 dark:text-surface-200 font-medium text-sm">Marketing Specialist</span>
                             </div>
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>
